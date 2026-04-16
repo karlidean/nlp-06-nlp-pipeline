@@ -187,8 +187,7 @@ After you get a copy of this repo in your own GitHub account,
 open a machine terminal in your `Repos` folder:
 
 ```shell
-# Replace username with YOUR GitHub username.
-git clone https://github.com/username/nlp-06-nlp-pipeline
+git clone https://github.com/karlidean/nlp-06-nlp-pipeline
 cd nlp-06-nlp-pipeline
 code .
 ```
