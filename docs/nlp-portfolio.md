@@ -13,7 +13,7 @@ In this course, we used multiple techniques for natural language processing. The
 ## 2. Systems and Data Sources
 [Notable Repository: Week 5 - Web Documents](https://github.com/karlidean/nlp-05-web-documents)\
 [Notable Repository: Week 6 - NLP Pipelines](https://github.com/karlidean/nlp-06-nlp-pipeline)\
-I worked with HTML web pages, JSON APIs, and plain text, and they all behave differently. HTML is semi-structured, so you have to dig through tags to find what you need, while JSON is much cleaner with defined key-value pairs (but can get tricky with nested data). Plain text is the most chaotic since there’s no structure at all, so it requires the most cleaning before you can actually analyze anything.\
+I worked with HTML web pages, JSON APIs, and plain text, and they all behave differently. HTML is semi-structured, so I had to dig through tags to find what I need, while JSON is much cleaner with defined key-value pairs (but can get tricky with nested data). Plain text is the most difficult to work with since there’s no structure at all, so it requires the most cleaning and normalizing before I could actually analyze anything.\
 \
 I handled messy data by standardizing and cleaning the text through lowercasing, punctuation removal, whitespace normalization, and stopword filtering with spaCy. I also handled missing or inconsistent values by assigning defaults like “unknown” to keep the dataset complete. This process reduced noise and made the data consistent enough for meaningful NLP analysis.
 
@@ -22,7 +22,7 @@ I handled messy data by standardizing and cleaning the text through lowercasing,
 I followed an EVTL pipeline to process the data. In the Extract stage, I collected data from sources such as web pages, APIs, and plain text documents. During Validate, I inspected the structure and content to ensure fields were present and handled missing or inconsistent values. In Transform, I applied NLP techniques including text cleaning, normalization, tokenization, and feature engineering to create meaningful signals. Finally, in Load, I output the processed data into a structured dataset for analysis and interpretation.
 
 ## 4. Signals and Analysis Methods
-[Referenced Repository: Week 6 - NLP Pipelines](https://github.com/karlidean/nlp-06-nlp-pipeline)\
+[Notable Repository: Week 6 - NLP Pipelines](https://github.com/karlidean/nlp-06-nlp-pipeline)\
 I computed NLP features to understand both the content and complexity of the text. This included word frequency through tokenization, basic context through token sequences, and keyword extraction using high-frequency and unique terms. I also engineered special signals like token count, vocabulary richness, and average word length to measure readability and technical complexity. Instead of sentiment analysis, I focused on structural signals that better reflect the nature of research writing.
 
 ## 5. Insights
@@ -42,6 +42,6 @@ This repo shows that I can take an existing NLP pipeline and actually understand
 
 
 ## 7. Skills
-This work highlights my skills in Python data processing, where I used libraries like pandas and spaCy to manipulate and analyze text data. I demonstrated the ability to work with unstructured and semi-structured text by cleaning, normalizing, and extracting meaningful features. I also handled messy or inconsistent inputs by validating structure, managing missing values, and standardizing formats to ensure reliable outputs.\
+This work highlights my skills in Python data processing, where I used libraries like pandas, BeautifulSoup, and spaCy to manipulate and analyze text data. I demonstrated the ability to work with unstructured and semi-structured text by cleaning, normalizing, and extracting meaningful features. I also handled messy or inconsistent inputs by validating structure, managing missing values, and standardizing formats to ensure reliable outputs.\
 \
 Additionally, I built and adapted repeatable NLP pipelines, showing that I can structure workflows that are scalable and reproducible. Finally, I communicated results professionally through clear documentation, Markdown explanations, and structured outputs that make the analysis easy to interpret.
