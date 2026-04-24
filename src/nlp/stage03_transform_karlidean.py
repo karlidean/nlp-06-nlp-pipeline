@@ -389,6 +389,14 @@ def run_transform(
     token_count: int = len(tokens)
     LOG.info(f"  token_count:         {token_count}")
 
+    # Average word length (proxy for complexity)
+    avg_word_length: float = (
+        round(sum(len(word) for word in tokens) / token_count, 2)
+        if token_count > 0
+        else 0.0
+    )
+    LOG.info(f"  avg_word_length:     {avg_word_length}")
+
     unique_token_count: int = len(set(tokens))
     LOG.info(f"  unique_token_count:  {unique_token_count}")
 
@@ -396,6 +404,16 @@ def run_transform(
     type_token_ratio: float = (
         round(unique_token_count / token_count, 4) if token_count > 0 else 0.0
     )
+
+    # Classification: Readability Levels
+    if avg_word_length >= 6:
+        readability_level = "Highly Technical"
+    elif avg_word_length >= 5:
+        readability_level = "Moderately Technical"
+    else:
+        readability_level = "Accessible"
+
+    LOG.info(f"  readability_level:   {readability_level}")
     LOG.info(f"  type_token_ratio:    {type_token_ratio}")
     LOG.info(f"  top 10 tokens:       {tokens[:10]}")
 
@@ -417,6 +435,8 @@ def run_transform(
         "unique_token_count": unique_token_count,
         "type_token_ratio": type_token_ratio,
         "author_count": author_count,
+        "avg_word_length": avg_word_length,
+        "readability_level": readability_level,
     }
 
     df = pd.DataFrame([record])
